@@ -1,0 +1,21 @@
+#!/bin/bash
+export script_path=/home/`whoami`/vep_data/ensembl-vep_latest.sif
+export cache_dir="/scratch/`whoami`/reference/Homo_sapiens_vep/data/cache"
+export plugin_dir="/scratch/`whoami`/reference/Homo_sapiens_vep/plugins"
+export reffasta="/opt/vep/.vep/fasta/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz"
+export cadd_snv="/opt/vep/.vep/CADD/GRCh38_v1.7/whole_genome_SNVs.tsv.gz"
+export cadd_indel="/opt/vep/.vep/CADD/GRCh38_v1.7/gnomad.genomes.r4.0.indel.tsv.gz"
+export cadd_sv="/opt/vep/.vep/CADD/GRCh38_v1.7/1000G_phase3_SVs.tsv.gz"
+export conservation_score="/opt/vep/.vep/GERP/gerp_conservation_scores.homo_sapiens.GRCh38.bw"
+export dbNSFP="/opt/vep/.vep/dbNSFP4/dbNSFP4.9a_grch38.gz"
+export REVEL="/opt/vep/.vep/REVEL/new_tabbed_revel_grch38.tsv.gz"
+export AlphaMissense="/opt/vep/.vep/AlphaMissense/AlphaMissense_hg38.tsv.gz"
+export snv_spliceAI="/opt/vep/.vep/spliceAI/spliceai_scores.raw.snv.hg38.vcf.gz"
+export indel_spliceAI="/opt/vep/.vep/spliceAI/spliceai_scores.raw.indel.hg38.vcf.gz"
+export DosageSensitivity="/opt/vep/.vep/DosageSensitivity/Collins_rCNV_2022.dosage_sensitivity_scores.tsv.gz"
+#dir_cache="/scratch/`whoami`/reference/Homo_sapiens_vep/data/cache"
+export threads=4 # used by --fork $threads 
+#human_ancestor_fa="/scratch/`whoami`/reference/Homo_sapiens_vep/human_ancestor_fa/"
+export clinvar="/opt/vep/.vep/ClinVar/clinvar.vcf.gz"
+export phastCons100way="/opt/vep/.vep/phastCons100way/hg38.phastCons100way.bw"
+export phyloP100way="/opt/vep/.vep/phyloP100way/hg38.phyloP100way.bw"
