@@ -20,7 +20,9 @@ def Usage(){
   
          Usage:
         -------------------------------------------
-         --inputvcf          : Input VCF file        
+         --inputvcf          : Input VCF file
+         --shardfile         : shard file (genomic coordinates). This is the file with chr name and chopped chr coordinates
+                               input options:  shards.1_M.txt (chr1-chr25); shard.test.txt (chr 21, 22)       
          --help              : See the usage
         ===========================================
          """
@@ -59,9 +61,11 @@ if(!params.inputvcf) {
     error "Please provide the input vcf file"
 }
 
-if(!params.shard_file){
-    params.shard_file = "${workflow.projectDir}/shards.1_M.txt"
+if(!params.shardfile){
+    error "shard file is missing. You need to be more vigilant"
 }
+
+params.shard_file = "${workflow.projectDir}/$params.shardfile"
 //shards.1_M.txt
 //shard.test.txt
 //shards.chr2.txt
